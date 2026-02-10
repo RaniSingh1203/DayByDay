@@ -1,0 +1,21 @@
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 64px;
+  }
+}
