@@ -1,3 +1,45 @@
+# 🌿 DayByDay – Personal Journal App
+
+DayByDay is a full-stack personal journal application built with **Nuxt 3** and **MySQL**.  
+It allows users to securely write, manage, and track their daily journal entries.
+
+---
+
+## ✨ Features
+
+- 🔐 JWT-based Authentication
+- 📝 Create, Read, Update, Delete (CRUD) journal entries
+- 📅 Daily journal tracking
+- 📊 Dashboard to view all journals
+- 🛡️ Protected API routes with middleware
+- ⚡ Fast UI powered by Nuxt 3
+- 🗄️ MySQL database integration
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Nuxt 3
+- Vue 3 (Composition API)
+
+
+### Backend
+- Nuxt 3 Server API (h3)
+- JWT Authentication
+- Middleware protection
+
+### Database
+- MySQL
+- Connection Pooling
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
