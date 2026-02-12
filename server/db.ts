@@ -1,17 +1,24 @@
 import mysql from 'mysql2/promise'
 import { useRuntimeConfig } from '#imports'
 
-export const pool = () => {
-  const config = useRuntimeConfig()
+let pool: mysql.Pool
 
-  return mysql.createPool({
-    host: config.dbHost,
-    port: Number(config.dbPort),
-    user: config.dbUser,
-    password: config.dbPassword,
-    database: config.dbName,
-    ssl: {
-      rejectUnauthorized: false
-    }
-  })
+export const getPool = () => {
+  if (!pool) {
+    const config = useRuntimeConfig()
+
+    pool = mysql.createPool({
+      host: config.dbHost,
+      port: Number(config.dbPort),
+      user: config.dbUser,
+      password: config.dbPassword,
+      database: config.dbName,
+      ssl: {
+        rejectUnauthorized: false
+      },
+      connectionLimit: 10
+    })
+  }
+
+  return pool
 }
