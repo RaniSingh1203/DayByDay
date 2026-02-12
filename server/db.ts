@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise'
 import { useRuntimeConfig } from '#imports'
 
-export const Pool = () => {
+export const pool = () => {
   const config = useRuntimeConfig()
 
   return mysql.createPool({
