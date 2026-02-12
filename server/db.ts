@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise'
 import { useRuntimeConfig } from '#imports'
 
-let pool: mysql.Pool
+let poolInstance: mysql.Pool | null = null
 
 function createPool() {
   const config = useRuntimeConfig()
@@ -22,12 +22,10 @@ function createPool() {
 }
 
 export const pool = {
-  execute: async (query: string, params?: any[]) => {
+  async execute(query: string, params?: any[]) {
     if (!poolInstance) {
       poolInstance = createPool()
     }
     return poolInstance.execute(query, params)
   }
 }
-
-let poolInstance: mysql.Pool
