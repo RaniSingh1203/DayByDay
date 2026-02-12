@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   runtimeConfig: {
-    jwtSecret: process.env.JWT_SECRET
+    jwtSecret: process.env.JWT_SECRET,
       dbHost: process.env.DB_HOST,
     dbPort: process.env.DB_PORT,
     dbUser: process.env.DB_USER,
