@@ -37,7 +37,7 @@ It allows users to securely write, manage, and track their daily journal entries
 
 ## 🔐 Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory :
 
 
 # Nuxt Minimal Starter
